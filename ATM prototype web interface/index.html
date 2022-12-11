@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pin Login w/ Html css and js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="pin-login.css">
+    
+</head>
+
+
+<body>
+
+  
+
+     <div class="pin-login" id="mainPinLogin">
+      <input type="password" placeholder="Enter your PIN" readonly class="pin-login__text pin-login__text--error">
+      <div class="pin-login__numpad" id="demo">
+         <!--  <div class="pin-login__key">0</div>
+  
+          <div class="pin-login__key material-icons"> done </div> -->
+       </div>   
+     </div>
+     
+     <script src="pin-login.js">
+      new PinLogin({
+      // mainPinLogin ye id ha jo uper daal dia ha  
+
+        el: document.getElementById("mainPinLogin"),
+        loginEndpoint: "login.php",
+        redirectTo: "dashboard.html",// dashboard.html
+        maxNumbers: 4,
+      });
+     </script>
+
+    
+</body>
+
+</html>
